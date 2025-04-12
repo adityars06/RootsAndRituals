@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { productfetch } from '../api/cart'
 
-function ListingPage({filteredList, products}) {
+const ListingPage = memo(({filteredList, products})=> {
   
   
   return (
@@ -21,6 +21,6 @@ function ListingPage({filteredList, products}) {
       }
     </div>
   )
-}
+})
 
 export default ListingPage
